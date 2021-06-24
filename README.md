@@ -1,1 +1,34 @@
-自定义一个上下左右居中的标签。
+## 自定义一个上下左右居中的标签。
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello</title>
+</head>
+<body>
+    <hello>hello</hello>
+</body>
+<script>
+    function customTag(tagName, fn){
+        Array
+            .from(document.getElementsByTagName(tagName))
+            .forEach(fn);
+    }
+
+    function greetingHandler(element) {
+        element.style.width='100px';
+        element.style.height='50px';
+        element.style.border='1px solid red';
+        element.style.position='absolute';
+        element.style.top='50%';
+        element.style.left='50%';
+        element.style.transform='translateX(-50px) translateY(-25px)';
+    }   
+
+    customTag('hello', greetingHandler);
+</script>
+</html>
+```
