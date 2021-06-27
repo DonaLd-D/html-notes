@@ -164,6 +164,61 @@
 |   `<param>`|  定义对象的参数|
     
 ***
+## HTML DOM `Document` 对象
+- 当浏览器载入 HTML 文档, 它就会成为 Document 对象。
+- Document 对象是 HTML 文档的根节点。
+- Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问。
+- 提示：Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。
+
+|   属性/方法   |   描述  |
+|   :----|  :----   |
+|   document.activeEvent    |   返回当前获取焦点元素  |
+|   document.addEventListener|  向文档添加句柄 |
+|   document.adoptNode(node)|   从另外一个文档返回adapded节点到当前文档 |
+|   document.anchors    |   返回对文档中所有Anchor对象的引用 |
+|   document.baseURI    |   返回文档的绝对基础URI        |
+|   document.body|  返回文档的body元素 |
+|   document.close()|   关闭用document.open()方法打开的输出流，并显示选定的数据 |
+|   document.cookie|    设置或返回与当前文档有关的所有cookie   |
+|   document.createAttribute()| 创建一个属性节点    |
+|   document.createComment()|   createComment()方法可创建注释节点    |
+|   document.createDocumentFragment()|  创建空的DocumentFragment对象，并返回此对象|
+|   document.createElement()|   创建元素节点|
+|   document.createTextNode()|  创建文本节点|
+|   document.doctype|   返回与文档相关的文档类型声明（DTD）|
+|   document.documentElement|   返回文档的根节点|
+|   document.documentMode|  返回用于通过浏览器渲染文档的模式|
+|   document.documentURI|   设置或返回文档的位置|
+|   document.domain|    返回当前文档的域名|
+|   document.embeds|    返回文档中所有嵌入的内容集合|
+|   document.forms| 返回对文档中所有Form对象引用|
+|   document.getElementsByClassName()|  返回文档中所有制定类名的元素集合，作为NodeList对象|
+|   document.getElementById()|  返回对拥有指定id的第一个对象的引用|
+|   document.getElementsByName()|   返回带有指定名称的对象集合|
+|   document.getElementsByTagName()|    返回带有指定标签名的对象集合|
+|   document.images||
+|   document.implementation||
+|   document.importNode()||
+|   document.inputEncoding||
+|   document.lastModified||
+|   document.links||
+|   document.normalize()||
+|   document.normalizeDocument()||
+|   document.open()||
+|   document.querySelector()||
+|   document.querySelectorAll()||
+|   document.readyState||
+|   document.referrer||
+|   document.removeEventListener()||
+|   document.renameNode()||
+|   document.scripts||
+|   document.stricErrorChecking||
+|   document.title||
+|   document.URL||
+|   document.write()||
+|   document.writeIn()||
+
+***
 
 ## 自定义一个hello标签。(造原始轮子的思路)
 
