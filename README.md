@@ -25,9 +25,9 @@
     - 定义了浏览器工具栏的标题
     - 定义了浏览器工具栏的标题
     - `显示在搜索引擎结果页面的标题`
-- 网页标题图片:<link rel="shortcut icon" href="图片url">
-- 为搜索引擎定义关键词:<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
-- 为网页定义描述内容: <meta name="description" content="免费 Web & 编程 教程">
+- 网页标题图片:`<link rel="shortcut icon" href="图片url">`
+- 为搜索引擎定义关键词:`<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">`
+- 为网页定义描述内容: `<meta name="description" content="免费 Web & 编程 教程">`
 
 ***
 |  基础       |          |
