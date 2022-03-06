@@ -3,13 +3,13 @@
 - display:block;转换为块状元素
 - display:inline-block;转换为行内块状元素
 
-### 块级元素
+### 块级元素(典型：div，很多标签可以看作div的衍生标签)
 - 能够识别宽高
 - margin和padding的上下左右均对其有效
 - 可以自动换行
 - 多个块状元素标签写在一起，默认排列方式为从上至下
 
-### 行内块元素
+### 行内块元素（典型：span,很多标签可以看作span的衍生标签）
 - 不自动换行
 - 能够识别宽高
 - 默认排列方式为从左到右
@@ -19,6 +19,15 @@
 - 对margin仅设置左右方向有效，上下无效；
 - padding设置上下左右都有效，即会撑大空间
 - 不会自动进行换行
+
+### <head></head>
+- title
+    - 定义了浏览器工具栏的标题
+    - 定义了浏览器工具栏的标题
+    - `显示在搜索引擎结果页面的标题`
+- 网页标题图片:<link rel="shortcut icon" href="图片url">
+- 为搜索引擎定义关键词:<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+- 为网页定义描述内容: <meta name="description" content="免费 Web & 编程 教程">
 
 ***
 |  基础       |          |
