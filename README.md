@@ -83,6 +83,10 @@
   - output
 - 新的语义和结构元素
   - HTML5提供了新的元素来创建更好的页面结构
+
+#### HTML5 Canvas
+- `<canvas>` 标签定义图形，比如图表和其他图像，您必须使用脚本来绘制图形
+
 #### SVG
 - SVG 指可伸缩矢量图形 (Scalable Vector Graphics)
 - SVG 用于定义用于网络的基于矢量的图形
@@ -149,10 +153,94 @@ function showError(error){
 #### HTML5 Audio(音频)
 - HTML5 提供了播放音频文件的标准。
 #### HTML5 新的 Input 类型
+- color
+- date
+- datetime `chrome不支持`
+- datetime-local `无时区`
+- email
+- month
+- number
+- range
+- search
+- tel
+- time
+- url
+- week
+#### HTML5 表单元素
+- `<datalist>`
+- `<keygen>`
+- `<output>`
 
+#### HTML5 语义元素
+- 无语义 元素实例: `<div>` 和 `<span>` - 无需考虑内容
+- 语义元素实例: `<form>`, `<table>`, and `<img>` 清楚的定义了它的内容
 
+#### HTML5 Web 存储
+- localStorage - 用于长久保存整个网站的数据，保存的数据没有过期时间，直到手动去除
+- sessionStorage - 用于临时保存同一窗口(或标签页)的数据，在关闭窗口或标签页之后将会删除这些数据
+```js
+// 存储
+localStorage.sitename = "早鸟教程";
+// 查找
+document.getElementById("result").innerHTML = localStorage.sitename;
+//删除
+localStorage.removeItem("sitename");
 
+// 保存数据：localStorage.setItem(key,value);
+// 读取数据：localStorage.getItem(key);
+// 删除单个数据：localStorage.removeItem(key);
+// 删除所有数据：localStorage.clear();
+// 得到某个索引的key：localStorage.key(index);
+```
 
+#### HTML5 应用程序缓存
+- 使用 HTML5，通过创建 cache manifest 文件，可以轻松地创建 web 应用的离线版本
+
+#### HTML5 `Web Workers`
+- 由于 web worker 位于外部文件中，它们无法访问下列 JavaScript 对象：
+  - window 对象
+  - document 对象
+  - parent 对象
+```html
+<body>
+<p>计数： <output id="result"></output></p>
+<button onclick="startWorker()">开始工作</button> 
+<button onclick="stopWorker()">停止工作</button>
+<p><strong>注意：</strong> Internet Explorer 9 及更早 IE 版本浏览器不支持 Web Workers.</p>
+<script>
+var w;
+function startWorker() {
+    if(typeof(Worker) !== "undefined") {
+        if(typeof(w) == "undefined") {
+            w = new Worker("demo_workers.js");
+        }
+        w.onmessage = function(event) {
+            document.getElementById("result").innerHTML = event.data;
+        };
+    } else {
+        document.getElementById("result").innerHTML = "抱歉，你的浏览器不支持 Web Workers...";
+    }
+}
+function stopWorker() { 
+    w.terminate();
+    w = undefined;
+}
+</script>
+</body>
+```
+```js
+//demo_workers.js
+var i=0;
+function timedCount(){
+    i=i+1;
+    postMessage(i);
+    setTimeout("timedCount()",500);
+}
+timedCount();
+```
+#### HTML5 `WebSocket`
+- 在 WebSocket API 中，浏览器和服务器只需要做一个握手的动作，然后，浏览器和服务器之间就形成了一条快速通道
+- HTML5 定义的 WebSocket 协议，能更好的节省服务器资源和带宽，并且能够更实时地进行通讯
 
 ***
 ## HTML DOM `Document` 对象
