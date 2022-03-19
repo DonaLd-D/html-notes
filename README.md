@@ -243,6 +243,46 @@ timedCount();
 - HTML5 定义的 WebSocket 协议，能更好的节省服务器资源和带宽，并且能够更实时地进行通讯
 
 ***
+## BOM 
+- window对象
+  - navigator对象（Navigator 对象包含有关浏览器的信息。）
+    - appCodeName
+    - appName
+    - appVersion
+    - cookieEnabled
+    - platform
+    - userAgent
+  - screen对象(Screen 对象包含有关客户端显示屏幕的信息。)
+  - history对象(History 对象包含用户（在浏览器窗口中）访问过的 URL。)
+    - length
+    - back()
+    - forward()
+    - go()
+  - location对象(Location 对象包含有关当前 URL 的信息。)
+    - hash
+    - host
+    - hostname
+    - href
+    - pathname
+    - port
+    - protocol
+    - search
+    - assign()
+    - reload()
+    - replace()
+#### window对象几个宽高相关属性
+- innerHeight,返回窗口的文档显示区的高度。
+- innerWidth,返回窗口的文档显示区的宽度。
+- outerHeight,返回窗口的外部高度，包含工具条与滚动条。
+- outerWidth,返回窗口的外部宽度，包含工具条与滚动条。
+- pageXOffset,设置或返回当前页面相对于窗口显示区左上角的 X 位置。
+- pageYOffset,设置或返回当前页面相对于窗口显示区左上角的 Y 位置。
+- screenLeft,返回相对于屏幕窗口的x坐标
+- screenTop,返回相对于屏幕窗口的y坐标
+- screenX,返回相对于屏幕窗口的x坐标
+- screenY,返回相对于屏幕窗口的y坐标
+
+***
 ## HTML DOM `Document` 对象
 - 当浏览器载入 HTML 文档, 它就会成为 Document 对象。
 - Document 对象是 HTML 文档的根节点。
@@ -275,27 +315,27 @@ timedCount();
 |   document.getElementById()|  返回对拥有指定id的第一个对象的引用|
 |   document.getElementsByName()|   返回带有指定名称的对象集合|
 |   document.getElementsByTagName()|    返回带有指定标签名的对象集合|
-|   document.images||
-|   document.implementation||
-|   document.importNode()||
-|   document.inputEncoding||
-|   document.lastModified||
-|   document.links||
-|   document.normalize()||
-|   document.normalizeDocument()||
-|   document.open()||
-|   document.querySelector()||
-|   document.querySelectorAll()||
-|   document.readyState||
-|   document.referrer||
-|   document.removeEventListener()||
-|   document.renameNode()||
-|   document.scripts||
-|   document.stricErrorChecking||
-|   document.title||
-|   document.URL||
-|   document.write()||
-|   document.writeIn()||
+|   document.images|返回对文档中所有 Image 对象引用。|
+|   document.implementation|返回处理该文档的 DOMImplementation 对象。|
+|   document.importNode()|把一个节点从另一个文档复制到该文档以便应用。|
+|   document.inputEncoding|返回用于文档的编码方式（在解析时）。|
+|   document.lastModified|返回文档被最后修改的日期和时间。|
+|   document.links|返回对文档中所有 Area 和 Link 对象引用。|
+|   document.normalize()|删除空文本节点，并连接相邻节点|
+|   document.normalizeDocument()|删除空文本节点，并连接相邻节点的|
+|   document.open()|打开一个流，以收集来自任何 document.write() 或 document.writeln() 方法的输出。|
+|   document.querySelector()|返回文档中匹配指定的CSS选择器的第一元素|
+|   document.querySelectorAll()|document.querySelectorAll() 是 HTML5中引入的新方法，返回文档中匹配的CSS选择器的所有元素节点列表|
+|   document.readyState|返回文档状态 (载入中……)|
+|   document.referrer|返回载入当前文档的文档的 URL。|
+|   document.removeEventListener()|移除文档中的事件句柄(由 addEventListener() 方法添加)|
+|   document.renameNode()|重命名元素或者属性节点。|
+|   document.scripts|返回页面中所有脚本的集合。|
+|   document.stricErrorChecking|设置或返回是否强制进行错误检查。|
+|   document.title|返回当前文档的标题。|
+|   document.URL|返回文档完整的URL|
+|   document.write()|向文档写 HTML 表达式 或 JavaScript 代码。|
+|   document.writeIn()|等同于 write() 方法，不同的是在每个表达式之后写一个换行符。|
 
 ***
 
